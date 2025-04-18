@@ -1,12 +1,13 @@
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Home, Building, Users, FileText, LogIn } from "lucide-react"
+import { ThemeToggle } from "@/components/theme-toggle"
 
 export function MainNav() {
   return (
     <div className="mr-4 hidden md:flex">
       <Link href="/" className="mr-6 flex items-center space-x-2">
-        <Building className="h-6 w-6 text-teal-600" />
+        <Building className="h-6 w-6 text-teal-600 dark:text-teal-400" />
         <span className="hidden font-bold sm:inline-block">ImobApp</span>
       </Link>
       <nav className="flex items-center space-x-6 text-sm font-medium">
@@ -36,6 +37,7 @@ export function MainNav() {
         </Link>
       </nav>
       <div className="ml-auto flex items-center space-x-4">
+        <ThemeToggle />
         <Button variant="ghost" size="sm" asChild>
           <Link href="/login">
             <LogIn className="mr-2 h-4 w-4" />
